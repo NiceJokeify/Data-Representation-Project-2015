@@ -28,3 +28,26 @@ Persons committed each year from **2007 to 2014** BY:
 * [Sentence Length] (http://www.irishprisons.ie/images/annualstats/committal_sentence_length_2007_2014.pdf) of commitals by Year.
 
 
+##METHODS
+
+*Method* | *Account*
+---------|----------
+GET| Requests data from a specified resource
+POST| Submits data to be processed to a specified resource
+
+####**Quick Overview of the Methods named**
+
+#####**>GET**
+*  Can be bookmarked/cached.
+*  Parameters remain in browser history. 
+*  Data is visible to everyone in the URL.
+*  GET -less secure compared to POST because data sent is part of the URL. 
+*  Never send sensitive info such as password.
+
+#####**>POST**
+*  Canot be bookmarked and is NOT cached.
+*  Parameters are NOT saved in browser history. 
+*  Data is NOT displayed in the URL.
+*  No data length restriction.
+*  POST is a safer than GET because the parameters are not stored in browser history or in web server logs.
+*  Never send sensitive info such as password.
