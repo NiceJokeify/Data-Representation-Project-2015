@@ -70,8 +70,36 @@ PUT| Creates/ Replaces all current representations of the target resource with t
 **Total:**  Represents total number commited by age.</br>
 **%:** Represents percentage of commited by age.</br>
 
-Age/Gender 2014 Commitals: 
-![Commitals]( "agegender2014")
+**Age/Gender 2014 Commitals:** </br>
+![image](http://oi65.tinypic.com/or2eww.jpg)
 
+**URL** that would display *TOTAL* number of commitals for year **2014**:</br>
+**URL:** https://irishprisons.ie/commitals/2014*
 
+Example URL for displaying needed information:</br>
+**URL**: *https://irishprisons.ie/commitals/agegender/(age)/(gender)/(Year)*  Replace (Year) with seeked value to display data for that given year.
 
+**Method** used : *GET* (used for this information retrieval)
+
+**URL** that would display specific information:</br>
+**URL**: *https://irishprisons.ie/commitals/18-21/male/2014* Returns number of commitals for the year 2014 ordered by age 18-21 and gender male.
+
+Data will be retured in **JSON**  format. It is a lightweight data-interchange format. It is easy for humans to read and write.
+
+*id:* Identification number of the table (2 = Age/Gender table)</br>
+*year:* Year of the Data</br>
+*age:* Age of the commited</br>
+*gender:* Gender of the commited</br>
+*type:* Type of Request Sent</br>
+*url:* URL of the Request</br>
+
+*JSON* data that will be returned, example. </br>
+```json
+[{"id": 2,
+"Year": 2014, 
+"Age": 12-21, 
+"Gender": Male, 
+"type" : "GET",
+"url" : "https://irishprisons.ie/commitals/18-21/male/2014"}]
+</code>
+```
