@@ -34,20 +34,32 @@ Persons committed each year from **2007 to 2014** BY:
 ---------|----------
 GET| Requests data from a specified resource
 POST| Submits data to be processed to a specified resource
+DELETE| Removes all current representations of the target resource given by a URI
+PUT| Creates/ Replaces all current representations of the target resource with the uploaded content.
+
 
 ####**Quick Overview of the Methods named**
-
-#####**>GET**
+#####**GET**
 *  Can be bookmarked/cached.
 *  Parameters remain in browser history. 
 *  Data is visible to everyone in the URL.
 *  GET -less secure compared to POST because data sent is part of the URL. 
 *  Never send sensitive info such as password.
 
-#####**>POST**
+#####**PUT**
 *  Canot be bookmarked and is NOT cached.
 *  Parameters are NOT saved in browser history. 
 *  Data is NOT displayed in the URL.
 *  No data length restriction.
 *  POST is a safer than GET because the parameters are not stored in browser history or in web server logs.
 *  Never send sensitive info such as password.
+
+
+##GENERAL - *URL (Uniform Resource Locator*)
+* Below is an example of a URL that user will use to access the main page of the page.</br>
+ ```http://irishprisons.ie/``` </br>
+
+
+
+
+
