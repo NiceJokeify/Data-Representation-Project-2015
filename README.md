@@ -56,10 +56,22 @@ PUT| Creates/ Replaces all current representations of the target resource with t
 
 
 ##GENERAL - *URL (Uniform Resource Locator*)
-* Below is an example of a URL that user will use to access the main page of the page.</br>
- ```http://irishprisons.ie/``` </br>
+* Below we have an example of a URL that user will use to access the main page of the page.</br>
+ ```http://www.irishprisons.ie/``` </br>
 
+#### 1. **Number of persons commited to prison by AGE and GENDER 2007-2014**
 
+*Example:* The dataset is divided into TOTAL of 5 columns. Only 2014 will be used for examples. Idea will be same for other years.</br>
+* AGE, Female, Male, Total, % </br>
+
+**Age:** Represents data age by intervals. ex. **<17 years old**</br>
+**Female:** Represents number of females commited by age.</br>
+**Male:**  Represents number of males commited by age.</br>
+**Total:**  Represents total number commited by age.</br>
+**%:** Represents percentage of commited by age.</br>
+
+Age/Gender 2014 Commitals: 
+![Commitals]( "agegender2014")
 
 
 
