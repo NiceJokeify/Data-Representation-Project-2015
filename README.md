@@ -86,7 +86,7 @@ Example URL for displaying needed information:</br>
 
 Data will be retured in **JSON**  format. It is a lightweight data-interchange format. It is easy for humans to read and write.
 
-*id:* Identification number of the table (2 = Age/Gender table)</br>
+*id:* Identification number of the table **(2 = Age/Gender table)**</br>
 *year:* Year of the Data</br>
 *age:* Age of the commited</br>
 *gender:* Gender of the commited</br>
@@ -101,5 +101,45 @@ Data will be retured in **JSON**  format. It is a lightweight data-interchange f
 "Gender": Male, 
 "type" : "GET",
 "url" : "https://irishprisons.ie/commitals/18-21/male/2014"}]
-</code>
+```
+-------
+
+
+#### 2. **Number of Place of Origin given by persons commited 2008-2014**
+
+*Example:* The dataset is divided into TOTAL of 8 columns. Only 2014 will be used for examples. Idea will be same for other years.</br>
+* County, 2014, 2013, 2012, 2011, 2010, 2009, 2008(TOTAL) </br>
+
+**County:** Represents data by county</br>
+**2014...:** Represents total of commited by county in this year.</br>
+
+**County 2014 Commitals:** </br>
+![image](http://oi66.tinypic.com/35ludmd.jpg)
+
+**URL** that would display *TOTAL* number of commitals for year **2014**:</br>
+**URL:** https://irishprisons.ie/commitals/2014*
+
+Example URL for displaying needed information:</br>
+**URL**: *https://irishprisons.ie/commitals/(county)/(year)* Replace (county) with seeked county name + Replace (Year) with seeked value to display data for that given year.
+
+**Method** used : *GET* (used for this information retrieval)
+
+**URL** that would display specific information:</br>
+**URL**: *https://irishprisons.ie/commitals/galway/2014* Returns number of commitals for the year 2014 from Galway
+
+Data will be retured in **JSON**  format. It is a lightweight data-interchange format. It is easy for humans to read and write.
+
+*id:* Identification number of the table **(3 = COUNTY table)**</br>
+*year:* Year of the Data</br>
+*county:* Place of Origin of commited</br>
+*type:* Type of Request Sent</br>
+*url:* URL of the Request</br>
+
+*JSON* data that will be returned, example. </br>
+```json
+[{"id": 2,
+"Year": 2014, 
+"County": Galway, 
+"type" : "GET",
+"url" : "https://irishprisons.ie/commitals/galway/2014"}]
 ```
