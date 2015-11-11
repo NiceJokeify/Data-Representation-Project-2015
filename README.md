@@ -77,12 +77,12 @@ PUT| Creates/ Replaces all current representations of the target resource with t
 **URL:** https://irishprisons.ie/commitals/2014*
 
 Example URL for displaying needed information:</br>
-**URL**: *https://irishprisons.ie/commitals/agegender/(age)/(gender)/(Year)*  Replace (Year) with seeked value to display data for that given year.
+**URL**: *https://irishprisons.ie/commitals/agegender/(YEAR)/(GENDER)/(AGE)*  Replace (Year) with seeked value to display data for that given year.
 
 **Method** used : *GET* (used for this information retrieval)
 
 **URL** that would display specific information:</br>
-**URL**: *https://irishprisons.ie/commitals/18-21/male/2014* Returns number of commitals for the year 2014 ordered by age 18-21 and gender male.
+**URL**: *https://irishprisons.ie/commitals/2014/male/18-21* Returns number of commitals for the year 2014 ordered by age 18-21 and gender male.
 
 Data will be retured in **JSON**  format. It is a lightweight data-interchange format. It is easy for humans to read and write.
 
@@ -97,10 +97,10 @@ Data will be retured in **JSON**  format. It is a lightweight data-interchange f
 ```json
 [{"id": 2,
 "Year": 2014, 
-"Age": 12-21, 
+"Age": 18-21, 
 "Gender": Male, 
 "type" : "GET",
-"url" : "https://irishprisons.ie/commitals/18-21/male/2014"}]
+"url" : "https://irishprisons.ie/commitals/2014/male/18-21"}]
 ```
 -------
 
@@ -120,12 +120,12 @@ Data will be retured in **JSON**  format. It is a lightweight data-interchange f
 **URL:** https://irishprisons.ie/commitals/2014*
 
 Example URL for displaying needed information:</br>
-**URL**: *https://irishprisons.ie/commitals/(county)/(year)* Replace (county) with seeked county name + Replace (Year) with seeked value to display data for that given year.
+**URL**: *https://irishprisons.ie/commitals/(YEAR)/(COUNTY)* Replace (county) with seeked county name + Replace (Year) with seeked value to display data for that given year.
 
 **Method** used : *GET* (used for this information retrieval)
 
 **URL** that would display specific information:</br>
-**URL**: *https://irishprisons.ie/commitals/galway/2014* Returns number of commitals for the year 2014 from Galway
+**URL**: *https://irishprisons.ie/commitals/2014/galway* Returns number of commitals for the year 2014 from Galway
 
 Data will be retured in **JSON**  format. It is a lightweight data-interchange format. It is easy for humans to read and write.
 
@@ -141,5 +141,5 @@ Data will be retured in **JSON**  format. It is a lightweight data-interchange f
 "Year": 2014, 
 "County": Galway, 
 "type" : "GET",
-"url" : "https://irishprisons.ie/commitals/galway/2014"}]
+"url" : "https://irishprisons.ie/commitals/2014/galway"}]
 ```
