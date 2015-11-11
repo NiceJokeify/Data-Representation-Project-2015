@@ -98,7 +98,7 @@ Data will be retured in **JSON**  format. It is a lightweight data-interchange f
 [{"id": 2,
 "Year": 2014, 
 "Age": 18-21, 
-"Gender": Male, 
+"Gender": "Male", 
 "type" : "GET",
 "url" : "https://irishprisons.ie/commitals/2014/male/18-21"}]
 ```
@@ -137,9 +137,50 @@ Data will be retured in **JSON**  format. It is a lightweight data-interchange f
 
 *JSON* data that will be returned, example. </br>
 ```json
-[{"id": 2,
+[{"id": 3,
 "Year": 2014, 
-"County": Galway, 
+"County": "Galway", 
 "type" : "GET",
 "url" : "https://irishprisons.ie/commitals/2014/galway"}]
 ```
+-------
+
+
+#### 3. **Number of persons commited by NATIONALITY 2008-2014**
+
+*Example:* The dataset is divided into TOTAL of 8 columns and 10 rows. Only 2014 will be used for examples. Idea will be same for other years.</br>
+* Nationality Group , 2014, 2013, 2012, 2011, 2010, 2009, 2008(TOTAL) </br>
+* Nationality Group , Irish, UK, Other European, African, Asian, Australian, South American, North American, Not Recorded, TOTAL </br>
+
+**Nationality Group:** Represents data by county</br>
+**2014...:** Represents total of commited by county in this year.</br>
+
+**Nationality 2014 Commitals:** </br>
+![image](http://oi63.tinypic.com/2rdhgnp.jpg)
+
+**URL** that would display *TOTAL* number of NATIONALITY commitals for year **2014**:</br>
+**URL:** https://irishprisons.ie/commitals/nationality/total*
+
+Example URL for displaying needed information:</br>
+**URL**: *https://irishprisons.ie/commitals/(YEAR)/(NATIONALITY)* Replace (nationality) with seeked nationality + Replace (Year) with seeked value to display data for that given year.
+
+**Method** used : *GET* (used for this information retrieval)
+
+**URL** that would display specific information:</br>
+**URL**: *https://irishprisons.ie/commitals/2014/African* Returns number of commitals for the year 2014 from Galway
+
+Data will be retured in **JSON**  format. It is a lightweight data-interchange format. It is easy for humans to read and write.
+
+*id:* Identification number of the table **(4 = Nationality table)**</br>
+*year:* Year of the Data</br>
+*nationality:* Nationality of commited</br>
+*type:* Type of Request Sent</br>
+*url:* URL of the Request</br>
+
+*JSON* data that will be returned, example. </br>
+```json
+[{"id": 4,
+"Year": 2014, 
+"Nationality": "African", 
+"type" : "GET",
+"url" : "https://irishprisons.ie/commitals/2014/african"}]
