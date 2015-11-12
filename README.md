@@ -10,7 +10,10 @@
 
 #Project Overview
 
-As part of my Data Representation and Querying Module I was asked to design an **API** for a Dataset but not to actually implement it. This API's main goal is to let the users access information that will be useful to them. It will be easy to use and also be user-friendly. The Dataset was accessed through [Data.Gov.ie] (https://data.gov.ie/data) and I was then sent to the [Irish Prisons website] (http://www.irishprisons.ie).
+As part of my Data Representation and Querying Module I was asked to design an **API** for a Dataset but not to actually implement it. This API's main goal is to let the users access information that will be useful to them. It will be easy to use and also be user-friendly. The Dataset was accessed through [Data.Gov.ie] (https://data.gov.ie/data) and I was then sent to the [Irish Prisons website] (http://www.irishprisons.ie). 
+
+In the first part (GET method) I will be focusing on User side of the application. 
+In the second part I will present the POST, DELETE and PUT methods, this part will apply to the Admin side or the developer side. Why would the second part not apply to standard users? Simply because we cannot have anyone just adding/ editing information in the dataset. This DataSet must remain credible source of information.
 
 #The DATASET
 
@@ -24,8 +27,7 @@ Persons committed each year from **2007 to 2014** BY:
 * [Age/Gender] (http://www.irishprisons.ie/images/annualstats/age_gender_2007_2014.pdf) of person commited
 * [Address] (http://www.irishprisons.ie/images/annualstats/county_commitals_year_2008_2014.pdf) Given by persons commited by County 
 * [Nationality](http://www.irishprisons.ie/images/annualstats/nationality_commitals_year_2008_2014.pdf) of person commited
-* [Offence Groups] (http://www.irishprisons.ie/images/annualstats/committal_offence_group_2007_2014.pdf) of sentence commitals by YEAR 
-* [Sentence Length] (http://www.irishprisons.ie/images/annualstats/committal_sentence_length_2007_2014.pdf) of commitals by Year.
+
 
 
 ##METHODS
@@ -59,6 +61,9 @@ PUT| Creates/ Replaces all current representations of the target resource with t
 * Below we have an example of a URL that user will use to access the main page of the page.</br>
  ```http://www.irishprisons.ie/``` </br>
 
+
+##*GET*
+------
 #### 1. **Number of persons commited to prison by AGE and GENDER 2007-2014**
 
 *Example:* The dataset is divided into TOTAL of 5 columns. Only 2014 will be used for examples. Idea will be same for other years.</br>
@@ -184,3 +189,46 @@ Data will be retured in **JSON**  format. It is a lightweight data-interchange f
 "Nationality": "African", 
 "type" : "GET",
 "url" : "https://irishprisons.ie/commitals/2014/african"}]
+```
+
+##*POST*
+------
+#### 1. **ADDING persons commited to prison by AGE and GENDER 2007-2014**
+If for example, new year starts or administrators will want to include data from previous years (<2007) that can be done using the **POST** method. </br>
+
+I will show below an example of **URL** that could be responsible for this.
+
+**URL:** ```http://irishprisons.ie/commitals/2/addyear```  *2 = ID of the table, this will direct the admin to this specific table*
+
+First **request will be sent** to add a year column to the table.
+```
+POST /addyear/newyear_table HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
+Host: www.irishprisons.ie
+Content-Type: text/html; charset=utf-8
+Accept-Language: en-us
+year="2014"&Male=" "&Female=" "&Total=" "
+Connection: Keep-Alive
+```
+
+After we would **receive** this kind of response: 
+
+```
+HTTP/1.1 200 OK
+Date: 17:16:00 11 November 9 2015
+Server: Apache/2.2.14 (Win32)
+Last-Modified: 13:56:53 Wednesday November 11 2015 GMT
+ETag: "63fh8765-p-3652fe00"
+Content-Type: text/html
+Connection: Closed
+
+<html>
+<body>
+<h1>Column added successfully</h1>
+</body>
+</html>
+```
+
+
+**Note: the task will be similar for adding information to the other tables as well, writing them up makes me feel like I'm mostly wasting readers time and just making the project longer and more complicated in genera. I want to keep things clear and easy to follow, Thank You**
+
