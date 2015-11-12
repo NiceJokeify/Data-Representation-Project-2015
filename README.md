@@ -307,14 +307,19 @@ Example of actual URL that would be user to remove table column year 2014 from t
 
 *Request* example in http: (for deleting year in the nationality table)
 
+```
 DELETE /removetable/3/2014 HTTP/1.1
 User-Agent: Chrome/47.0.2526.58 (compatible; Windows; Mac; Linux; MSIE5.01; Windows NT)
 Host: localhost
 Content-Type: text/html; charset=utf-8
 Accept-Language: en-us
 Connection: keep-alive
-A responce example in http:
 
+```
+
+*Response* in http:
+
+```
 HTTP/1.1 200 OK
 Date: 17:55:00 Thursday November 12 2015
 Server: Apache Server
@@ -327,5 +332,5 @@ uri: "http://irishprisons.ie/removetable/3/2014"
 <h1>Year column deleted.</h1>
 </body>
 </html>
-
+```
 
