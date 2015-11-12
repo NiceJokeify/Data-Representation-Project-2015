@@ -198,6 +198,9 @@ If for example, new year starts or administrators will want to include data from
 
 I will show below an example of **URL** that could be responsible for this.
 
+**NOTE:** URL's with ID are only available to system administrators or people that have previously logged in to their accounts providing that their accounts are with special rights. 
+Ordinary User will not be able to do anything without obtaining privilege option.
+
 **URL:** ```http://irishprisons.ie/commitals/2/addyear```  *2 = ID of the table, this will direct the admin to this specific table*
 
 First **request will be sent** to add a year column to the table.
@@ -231,4 +234,39 @@ Connection: Closed
 
 
 **Note: the task will be similar for adding information to the other tables as well, writing them up makes me feel like I'm mostly wasting readers time and just making the project longer and more complicated in genera. I want to keep things clear and easy to follow, Thank You**
+
+
+
+
+##*PUT*
+------
+#### 2. **UPDATING data about persons commited to prison by NATIONALITY 2007-2014**
+Let's say now the developer wants to send some info about updating the table at the root of the server, hw can do this through the PUT method. Best idea is to use PUT when you can update a resource completely through a specific resource. You would do this only if you know the specific location of this. Below I will show example of specific item in the URL...</br>
+```http://irishprisons.ie/commitals/3/updateyear``` *3 = ID of the NATIONALITY dataset.* 
+
+
+I will show below an example of **URL** that could be responsible for this.
+
+**URL:** ```http://irishprisons.ie/commitals/3/updateyear```  *3 = ID of the table, this will direct the admin to this specific table*
+
+First **request will be sent** to update a year column to the table.
+```
+PUT /year.htm HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
+Host: www.irishprisons.ie
+Accept-Language: en-us
+updateyear="2014"&Nationality Group=" "&Irish=" "&UK=" "&Other European=" "&African=" "&Asian=" "&Australian=" "&South American=" "&North American=" "&Not Recorded=" "&TOTAL=" "
+Connection: Keep-Alive
+Content-type: text/html
+
+```
+
+After we would **receive** this kind of response: 
+
+```
+
+```
+
+
+**Note: the task will be similar for updating information to the other tables as well. I want to keep things clear and easy to follow, Thank You**
 
