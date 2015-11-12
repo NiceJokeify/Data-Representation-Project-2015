@@ -264,6 +264,19 @@ Content-type: text/html
 After we would **receive** this kind of response: 
 
 ```
+HTTP/1.1 201 Created
+Date: Thursday, 12 November 2015 02:31:00 GMT
+Server: Apache/2.2.14 (Win32)
+Content-type: text/html
+Content-length: 30
+Connection: Closed
+
+
+<html>
+<body>
+<h1>The file was updated.</h1>
+</body>
+</html>
 
 ```
 
