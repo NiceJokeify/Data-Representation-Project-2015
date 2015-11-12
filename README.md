@@ -206,7 +206,7 @@ Ordinary User will not be able to do anything without obtaining privilege option
 First **request will be sent** to add a year column to the table.
 ```
 POST /addyear/newyear_table HTTP/1.1
-User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
+User-Agent: Chrome/47.0.2526.58 (compatible; Windows; Mac; Linux; MSIE5.01; Windows NT)
 Host: www.irishprisons.ie
 Content-Type: text/html; charset=utf-8
 Accept-Language: en-us
@@ -252,7 +252,7 @@ I will show below an example of **URL** that could be responsible for this.
 First **request will be sent** to update a year column to the table.
 ```
 PUT /year.htm HTTP/1.1
-User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)
+User-Agent:Chrome/47.0.2526.58 (compatible; Windows; Mac; Linux; MSIE5.01; Windows NT)
 Host: www.irishprisons.ie
 Accept-Language: en-us
 updateyear="2014"&Nationality Group=" "&Irish=" "&UK=" "&Other European=" "&African=" "&Asian=" "&Australian=" "&South American=" "&North American=" "&Not Recorded=" "&TOTAL=" "
@@ -305,6 +305,27 @@ Example to delete year from the dataset would be this.</br>
 Example of actual URL that would be user to remove table column year 2014 from table of ID 3.</br>
 **URL** *```http://irishprisons.ie/removetable/3/2014```*
 
+*Request* example in http: (for deleting year in the nationality table)
 
+DELETE /removetable/3/2014 HTTP/1.1
+User-Agent: Chrome/47.0.2526.58 (compatible; Windows; Mac; Linux; MSIE5.01; Windows NT)
+Host: localhost
+Content-Type: text/html; charset=utf-8
+Accept-Language: en-us
+Connection: keep-alive
+A responce example in http:
+
+HTTP/1.1 200 OK
+Date: 17:55:00 Thursday November 12 2015
+Server: Apache Server
+Connection: Closed
+Content-Type: text/html
+uri: "http://irishprisons.ie/removetable/3/2014"
+
+<html>
+<body>
+<h1>Year column deleted.</h1>
+</body>
+</html>
 
 
