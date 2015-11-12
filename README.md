@@ -281,5 +281,14 @@ Connection: Closed
 ```
 
 
-**Note: the task will be similar for updating information to the other tables as well. I want to keep things clear and easy to follow, Thank You**
+**Note: the task will be similar for updating information to the other tables and years in the tables as well. I want to keep things clear and easy to follow. Project will be updated in the future as we go along.**
+
+
+##*DELETE*
+------
+
+#### 3. **DELETING data about persons commited to prison by NATIONALITY 2007-2014 from the DATASET**
+
+Information can be added, information can be updated/modified then we also need the possibility of deleting information from the DATASET for a number of resons. Instead of constantly modifying the dataset and there is always a possibility to make stuff messy, it could be easier and more efficient to make new table. Whatever is it thar administrator prefers. Possibility of deleting must be there. For that we will use the **DELETE**  method. 
+
 
