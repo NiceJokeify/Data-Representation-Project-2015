@@ -291,4 +291,11 @@ Connection: Closed
 
 Information can be added, information can be updated/modified then we also need the possibility of deleting information from the DATASET for a number of resons. Instead of constantly modifying the dataset and there is always a possibility to make stuff messy, it could be easier and more efficient to make new table. Whatever is it thar administrator prefers. Possibility of deleting must be there. For that we will use the **DELETE**  method. 
 
+Let's remind ourselves what **DELETE** method does.
+
+>**DELETE** method is used for deleting certain information from the dataset</br>
+
+Below is an example of a URL to delete the whole table from the dataset.</br>
+
+**URL:** ```http://irishprisons.ie/removetable/(id)``` *Substituting (id) with table ID will result in deletion of the whole table from the dataset* </br>
 
