@@ -299,3 +299,12 @@ Below is an example of a URL to delete the whole table from the dataset.</br>
 
 **URL:** ```http://irishprisons.ie/removetable/(id)``` *Substituting (id) with table ID will result in deletion of the whole table from the dataset* </br>
 
+Example to delete year from the dataset would be this.</br>
+**URL:** *```http://irishprisons.ie/removetable/(id)/(year)```*  *Substituting (id) and (year) with specific information will result in deletion of the specified column YEAR*</br>
+
+Example of actual URL that would be user to remove table column year 2014 from table of ID 3.</br>
+**URL** *```http://irishprisons.ie/removetable/3/2014```*
+
+
+
+
