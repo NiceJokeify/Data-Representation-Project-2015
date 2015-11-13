@@ -335,4 +335,7 @@ uri: "http://irishprisons.ie/removetable/3/2014"
 ```
 
 ##Summary/Argument
-//to be done 
+This API was created by request from Apps4Gaps. I've chosen the dataset about prison commitals and I hope that the API will help to access the dataset in a more user friendly and faster way. The added functionality of adding and deleting general or even specific information allows for even more control over the datatset. I very much hope that Apps4Gaps will use this API useful in their future endeavours.
+Thank You for the time spent reading this and I hope you enjoyed it.
+
+#####Pawel Borzym
